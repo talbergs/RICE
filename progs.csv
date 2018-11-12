@@ -1,5 +1,5 @@
 base-devel,is a group package with sudo and compilation software.
-clipmenu,clipmenud in bg remembers your clips, reclip from dmenu
+clipmenu,clipmenud in bg remembers your clips
 ttf-google-fonts-git,huge fonts package
 all-repository-fonts,even more fonts
 ttf-junicode,Junius font containing almost complete medieval latin script glyphs
@@ -69,3 +69,4 @@ dialog,will be needed anyways
 dmenu-ee-git,dmenu-extended-edition (a program launcher)
 xst,a somebodies work on terminal (st fork)
 crystal,promising language
+openssh,how is this not in base-devel?
