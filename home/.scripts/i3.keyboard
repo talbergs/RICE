@@ -1,0 +1,20 @@
+#!/bin/bash
+# sets next kb variant or echoes current
+# always remaps capslock on any kb variant
+
+KBVARIANT=$(setxkbmap -query | grep layout | awk '{print $2}')
+[ -z $1 ] && echo $KBVARIANT && exit
+
+KBVARIANTS=("us" "lv -variant apostrophe" "ru")
+
+for i in "${!KBVARIANTS[@]}";do
+    if [[ "${KBVARIANTS[$i]}" == $KBVARIANT* ]];then
+        I=$(( $i + 1 ))
+    fi
+done
+
+setxkbmap ${KBVARIANTS[$I]:-${KBVARIANTS[0]}}
+xmodmap -e 'clear lock' -e 'keycode 66 = Escape'
+
+# calls i3blocks to update sig 29 block
+pkill -RTMIN+29 i3blocks

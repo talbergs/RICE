@@ -1,0 +1,8 @@
+home/.config/*/*
+!home/.config/i3/config
+!home/.config/i3blocks/config
+!home/.config/dunst/dunstrc
+!home/.config/nvim/init.vim
+!home/.config/nvim/colors
+!home/.config/nvim/ftplugin
+!home/.config/termite/config

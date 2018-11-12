@@ -1,0 +1,152 @@
+# bill-key
+set $mod Mod4
+set $term termite
+
+# designer cosmoss
+for_window [class="^.*"] border pixel 2
+gaps inner 10
+font pango:Roboto 12
+# this option makes battut workspace
+workspace_auto_back_and_forth yes
+# mouse+$mod to drag floating windows
+floating_modifier $mod
+
+# to start a terminal
+bindsym $mod+Return exec $term
+# kill focused window
+bindsym $mod+Shift+q kill
+# start dmenu-extended-edition (a program launcher)
+bindsym $mod+d exec dmenu_run -b -z -o .8 -dim 0.2 -h 30 -fn Roboto -x 320 -y 210 -dc "#aaff33" -nf "#fff" -w 1200 -p prog -q -t
+# clipboard history lookup (chosen is written in current clipboard)
+bindsym $mod+c exec clipmenu
+# rotates keyboards for ya
+bindsym $mod+F12 exec --no-startup-id i3.keyboard set-next && pkill -RTMIN+29 i3blocks
+# restart i3 inplace
+bindsym $mod+Shift+r restart
+# x to lock
+bindsym $mod+shift+x exec i3.lockscreen
+# w for web
+bindsym $mod+w exec --no-startup-id $TRUEBROWSER
+# seek cycle
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+# Main Calculator
+# $mod+Control:resizes
+# $mod+Shift:moves
+# $mod:focuses
+bindsym $mod+h focus left
+bindsym $mod+Left focus left
+bindsym $mod+Shift+h move left 30
+bindsym $mod+Shift+Left move left 30
+bindsym $mod+Control+h exec --no-startup-id i3.resize left
+bindsym $mod+Control+Left exec --no-startup-id i3.resize left
+bindsym $mod+j focus down
+bindsym $mod+Down focus down
+bindsym $mod+Shift+j move down 30
+bindsym $mod+Shift+Down move down 30
+bindsym $mod+Control+j exec --no-startup-id i3.resize down
+bindsym $mod+Control+Down exec --no-startup-id i3.resize down
+bindsym $mod+k focus up
+bindsym $mod+Up focus up
+bindsym $mod+Shift+k move up 30
+bindsym $mod+Shift+Up move up 30
+bindsym $mod+Control+k exec --no-startup-id i3.resize up
+bindsym $mod+Control+Up exec --no-startup-id i3.resize up
+bindsym $mod+l focus right
+bindsym $mod+Right focus right
+bindsym $mod+Shift+l move right 30
+bindsym $mod+Shift+Right move right 30
+bindsym $mod+Control+l exec --no-startup-id i3.resize right
+bindsym $mod+Control+Right exec --no-startup-id i3.resize right
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+bar {
+    # -t option needed for transparency
+    i3bar_command i3bar -t
+    colors {
+        background #00000000
+        focused_workspace #3685e2 #3685e2 #fafafa
+        active_workspace #5294e2 #5294e2 #fafafa
+        inactive_workspace #00000000 #404552 #fafafa
+        urgent_workspace #ff5757 #ff5757 #fafafa
+    }
+    status_command i3blocks
+    position top
+}
+
+# quick access scratch pad terminal
+for_window [instance="dropdown"] floating enable
+for_window [instance="dropdown"] resize set 725 500
+for_window [instance="dropdown"] move scratchpad
+for_window [instance="dropdown"] border pixel 4
+exec --no-startup-id $term --name=dropdown
+bindsym $mod+grave [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
+
+# variation for php repl (has autoccomplete)
+for_window [instance="psysh"] floating enable
+for_window [instance="psysh"] resize set 60ppt 90ppt
+for_window [instance="psysh"] move scratchpad
+for_window [instance="psysh"] border pixel 4
+bindsym $mod+p exec --no-startup-id dropdown.spawn psysh
+
+# show/hide bars
+bindsym $mod+b bar mode toggle
+# used for visually moving wondow across workspaces
+bindsym $mod+Shift+b floating toggle; sticky toggle
+# one less key to remember
+bindsym $mod+t split toggle
+# exiting i3 session
+bindsym $mod+Shift+Escape exec "i3-nagbar -t warning -m 'Goin back to that cosy commandline?' -B 'Yes, exit i3' 'i3-msg exit'"
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+# fullscreen mode
+bindsym $mod+f fullscreen toggle
+# spawn filebrowse
+bindsym $mod+r exec $term -e ranger
+# window sticky for all workspaces (if floating)
+bindsym $mod+o sticky toggle
+## fn
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec light -U 10
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && pkill -RTMIN+30 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && pkill -RTMIN+30 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && pkill -RTMIN+30 i3blocks
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
