@@ -28,8 +28,8 @@ bindsym $mod+shift+x exec i3.lockscreen
 # w for web
 bindsym $mod+w exec --no-startup-id $TRUEBROWSER
 # seek cycle
-bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace prev
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Alt+Tab workspace prev
 
 # Main Calculator
 # $mod+Control:resizes
