@@ -1,5 +1,6 @@
 # bill-key
 set $mod Mod4
+set $alt Mod1
 set $term termite
 
 # designer cosmoss
@@ -29,7 +30,7 @@ bindsym $mod+shift+x exec i3.lockscreen
 bindsym $mod+w exec --no-startup-id $TRUEBROWSER
 # seek cycle
 bindsym $mod+Tab workspace back_and_forth
-bindsym $mod+Alt+Tab workspace prev
+bindsym $mod+$alt+Tab workspace prev
 
 # Main Calculator
 # $mod+Control:resizes
