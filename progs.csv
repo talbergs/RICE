@@ -1,10 +1,6 @@
 base-devel,is a group package with sudo and compilation software.
 clipmenu,clipmenud in bg remembers your clips
-ttf-google-fonts-git,huge fonts package
 all-repository-fonts,even more fonts
-ttf-junicode,Junius font containing almost complete medieval latin script glyphs
-ttf-emojione,is a package that gives the system unicode symbols and emojis used in the status bar and elsewhere.
-ttf-symbola,needed provides unicode and emoji symbols.
 google-chrome,not qutebrowser (google-chrome-stable --app=<url>) to run it in app mode
 xorg-xrandr,adjusts screen resolution and orientation
 nvidia,latest Nvidia drivers right there
@@ -71,4 +67,4 @@ xst,a somebodies work on terminal (st fork)
 crystal,promising language
 openssh,how is this not in base-devel?!
 cronie,crontab .. not sure..
-libmysqlclient,mysql 8 libraries - takes forever to install
+mariadb,do the "mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql" before mariadb.service
