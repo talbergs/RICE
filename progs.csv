@@ -68,3 +68,5 @@ crystal,promising language
 openssh,how is this not in base-devel?!
 cronie,crontab .. not sure..
 mariadb,do the "mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql" before mariadb.service
+apache,hack it if you can
+libevent,common lib
