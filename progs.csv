@@ -72,4 +72,6 @@ apache,hack it if you can
 libevent,common lib
 php-fpm,
 docker,
+php-gd,
 docker-compose,
+fish,
