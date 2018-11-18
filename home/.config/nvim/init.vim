@@ -14,6 +14,7 @@ set shiftwidth=4
 set list
 set listchars=space:⋅,trail:•,tab:᚛⋅,nbsp:⦸,extends:»,precedes:«
 set expandtab
+set noswapfile
 set scrolloff=4
 
 call plug#begin()
