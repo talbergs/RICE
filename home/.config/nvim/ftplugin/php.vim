@@ -21,6 +21,7 @@ vmap <silent><leader>em :<c-u>call phpactor#ExtractMethod()<cr>
 let path = expand('%:p')
 if path =~ '/frontends/php'
 	set noexpandtab
-	set listchars+=tab:\ ⋅
+	set listchars+=tab:◇―
 	call matchadd('ColorColumn', '\%121v', 100)
+    nnoremap gf :call fzf#vim#files(getcwd(),{'options':'-q '.substitute(expand('<cfile>'),'/','','').' --prompt ">: "'})<cr>
 endif

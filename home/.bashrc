@@ -22,3 +22,5 @@ function mkcd() {
 }
 
 PS1='[\u@\h \W]\$ '
+
+exec fish

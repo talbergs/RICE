@@ -4,7 +4,7 @@ set $alt Mod1
 set $term termite
 
 # designer cosmoss
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 gaps inner 10
 font pango:Roboto 12
 # this option makes battut workspace
@@ -17,7 +17,8 @@ bindsym $mod+Return exec $term
 # kill focused window
 bindsym $mod+Shift+q kill
 # start dmenu-extended-edition (a program launcher)
-bindsym $mod+d exec dmenu_run -b -z -o .8 -dim 0.2 -h 30 -fn Roboto -x 320 -y 210 -dc "#aaff33" -nf "#fff" -w 1200 -p prog -q -t
+#bindsym $mod+d exec dmenu_run -b -z -o .8 -dim 0.2 -h 30 -fn Roboto -x 320 -y 210 -dc "#aaff33" -nf "#fff" -w 1200 -p prog -q -t
+bindsym $mod+d exec compgen -c | dmenu -f -i -z -dim .2 -l 15 -h 20 -fn Roboto 
 # clipboard history lookup (chosen is written in current clipboard)
 bindsym $mod+c exec clipmenu
 # rotates keyboards for ya
@@ -33,6 +34,7 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+$alt+Tab workspace prev
 
 # Main Calculator
+# $mod+Control+Shift:scale-to-corner
 # $mod+Control:resizes
 # $mod+Shift:moves
 # $mod:focuses
@@ -42,6 +44,7 @@ bindsym $mod+Shift+h move left 30
 bindsym $mod+Shift+Left move left 30
 bindsym $mod+Control+h exec --no-startup-id i3.resize left
 bindsym $mod+Control+Left exec --no-startup-id i3.resize left
+bindsym $mod+Control+Shift+Left exec --no-startup-id i3.bottomleft
 bindsym $mod+j focus down
 bindsym $mod+Down focus down
 bindsym $mod+Shift+j move down 30
@@ -60,6 +63,7 @@ bindsym $mod+Shift+l move right 30
 bindsym $mod+Shift+Right move right 30
 bindsym $mod+Control+l exec --no-startup-id i3.resize right
 bindsym $mod+Control+Right exec --no-startup-id i3.resize right
+bindsym $mod+Control+Shift+Right exec --no-startup-id i3.bottomright
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -121,7 +125,7 @@ bindsym $mod+p exec --no-startup-id dropdown.spawn psysh
 
 # show/hide bars
 bindsym $mod+b bar mode toggle
-# used for visually moving wondow across workspaces
+# used for visually moving wondow across workspaces or multitasking
 bindsym $mod+Shift+b floating toggle; sticky toggle
 # one less key to remember
 bindsym $mod+t split toggle
