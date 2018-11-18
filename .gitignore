@@ -6,3 +6,5 @@ home/.config/*/*
 !home/.config/nvim/colors
 !home/.config/nvim/ftplugin
 !home/.config/termite/config
+!home/.config/fish/config.fish
+!home/.config/fish/fishfile
