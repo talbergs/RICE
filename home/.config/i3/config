@@ -18,7 +18,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 # start dmenu-extended-edition (a program launcher)
 #bindsym $mod+d exec dmenu_run -b -z -o .8 -dim 0.2 -h 30 -fn Roboto -x 320 -y 210 -dc "#aaff33" -nf "#fff" -w 1200 -p prog -q -t
-bindsym $mod+d exec compgen -c | dmenu -f -i -z -dim .2 -l 15 -h 20 -fn Roboto 
+bindsym $mod+d exec compgen -c | dmenu -f -i -z -dim .2 -l 15 -h 20 -fn Roboto | sh
 # clipboard history lookup (chosen is written in current clipboard)
 bindsym $mod+c exec clipmenu
 # rotates keyboards for ya
@@ -31,6 +31,7 @@ bindsym $mod+shift+x exec i3.lockscreen
 bindsym $mod+w exec --no-startup-id $TRUEBROWSER
 # seek cycle
 bindsym $mod+Tab workspace back_and_forth
+bindsym $alt+Tab workspace next
 bindsym $mod+$alt+Tab workspace prev
 
 # Main Calculator

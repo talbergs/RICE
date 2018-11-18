@@ -21,7 +21,9 @@ green "yay check"
 ) &>/dev/null
 
 green "dotpaste/symlinking"
-mkdir -p ~/.config/{i3,i3blocks,ranger,mpv,termite,nvim,compton,dunst}
+mkdir -p ~/.config/{fish,i3,i3blocks,ranger,mpv,termite,nvim,compton,dunst}
+pop .config/fish/fishfile
+pop .config/fish/config.fish
 pop .config/i3/config
 pop .config/i3blocks/config
 pop .config/dunst/dunstrc
