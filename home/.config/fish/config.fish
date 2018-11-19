@@ -4,4 +4,4 @@ if not functions -q fisher
     fish -c fisher
 end
 
-set -U __done_exclude '^(vim|vi|nvim|git|svn)' 
+set -U __done_exclude '^(open|vim|vi|nvim|git|svn)' 

@@ -21,7 +21,13 @@ green "yay check"
 ) &>/dev/null
 
 green "dotpaste/symlinking"
-mkdir -p ~/.config/{fish,i3,i3blocks,ranger,mpv,termite,nvim,compton,dunst}
+mkdir -p ~/.config/{zathura,mpd,fish,i3,i3blocks,ranger,mpv,termite,nvim,compton,dunst}
+pop .config/mpv/input.conf
+pop .config/mpd/mpd.conf
+pop .config/ranger/commands.py
+pop .config/ranger/scope.sh
+pop .config/ranger/rc.conf
+pop .config/zathura/zathurarc
 pop .config/fish/fishfile
 pop .config/fish/config.fish
 pop .config/i3/config

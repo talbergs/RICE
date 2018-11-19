@@ -27,6 +27,7 @@ Plug 'neomake/neomake'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/fzf.vim'
+Plug 'wincent/terminus'
 call plug#end()
 
 nnoremap <leader>w :w<cr>
