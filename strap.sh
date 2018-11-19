@@ -25,6 +25,7 @@ mkdir -p ~/.config/{zathura,mpd,fish,i3,i3blocks,ranger,mpv,termite,nvim,compton
 pop .config/mpv/input.conf
 pop .config/mpd/mpd.conf
 pop .config/ranger/commands.py
+pop .config/ranger/devicons.py
 pop .config/ranger/scope.sh
 pop .config/ranger/rc.conf
 pop .config/ranger/plugins

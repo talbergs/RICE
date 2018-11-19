@@ -12,3 +12,5 @@ home/.config/*/*
 !home/.config/mpd/mpd.conf
 !home/.config/ranger/**
 !home/.config/zathura/zathurarc
+*.pyc
+__init__.py
