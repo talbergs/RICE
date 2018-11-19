@@ -10,7 +10,5 @@ home/.config/*/*
 !home/.config/fish/fishfile
 !home/.config/mpv/input.conf
 !home/.config/mpd/mpd.conf
-!home/.config/ranger/scope.sh
-!home/.config/ranger/rc.conf
-!home/.config/ranger/commands.py
+!home/.config/ranger/**
 !home/.config/zathura/zathurarc

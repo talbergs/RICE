@@ -27,6 +27,7 @@ pop .config/mpd/mpd.conf
 pop .config/ranger/commands.py
 pop .config/ranger/scope.sh
 pop .config/ranger/rc.conf
+pop .config/ranger/plugins
 pop .config/zathura/zathurarc
 pop .config/fish/fishfile
 pop .config/fish/config.fish
