@@ -8,6 +8,7 @@ home/.config/*/*
 !home/.config/termite/config
 !home/.config/fish/config.fish
 !home/.config/fish/fishfile
+!home/.config/fish/functions/
 !home/.config/mpv/input.conf
 !home/.config/mpd/mpd.conf
 !home/.config/ranger/**
