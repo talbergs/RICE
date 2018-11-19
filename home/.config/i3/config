@@ -23,6 +23,10 @@ bindsym $mod+d exec compgen -c | dmenu -f -i -z -dim .2 -l 15 -h 20 -fn Roboto |
 bindsym $mod+c exec clipmenu
 # rotates keyboards for ya
 bindsym $mod+F12 exec --no-startup-id i3.keyboard set-next && pkill -RTMIN+29 i3blocks
+# F11 scrot
+bindsym --release $mod+F11 exec notify-send "scrot --select" && scrot -s
+bindsym $mod+Shift+F11 exec notify-send "scrot (all screen)" && scrot
+bindsym $mod+$alt+F11 exec notify-send "scrot --focused" && scrot -u
 # restart i3 inplace
 bindsym $mod+Shift+r restart
 # x to lock
