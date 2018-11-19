@@ -1,5 +1,6 @@
 base-devel,is a group package with sudo and compilation software.
 clipmenu,clipmenud in bg remembers your clips
+nerd-fonts-complete,
 all-repository-fonts,even more fonts
 google-chrome,not qutebrowser (google-chrome-stable --app=<url>) to run it in app mode
 xorg-xrandr,adjusts screen resolution and orientation
@@ -85,4 +86,3 @@ mydumper,good utility
 ruby,householders brush
 blender,
 ffmpegthumbnailer,
-nerd-fonts-complete,

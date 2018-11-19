@@ -3,6 +3,7 @@ export PATH="$(du $HOME/.scripts/ | cut -f2 | tr '\n' ':')$PATH"
 if [[ -d $HOME/Dropbox/bin ]]; then
     export PATH="$PATH:$HOME/Dropbox/bin"
 fi
+export LANG=en_US.UTF-8
 export EDITOR="nvim"
 export TERMINAL="termite"
 export BROWSER="linkhandler"
