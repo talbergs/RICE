@@ -1,5 +1,5 @@
 #!/bin/bash
-(ping -c 1 8.8.8.8 &>/dev/null && exit 0 || echo "No internet." && exit 1) || exit
+# (ping -c 1 8.8.8.8 &>/dev/null && exit 0 || echo "No internet." && exit 1) || exit
 PROGS=$PWD/progs.csv
 DOTS=$PWD/home
 green() {
@@ -41,9 +41,12 @@ pop .scripts
 pop .bashrc
 pop .profile
 pop .xinitrc
+pop .Xdefaults
 
 ln -sf $HOME/.profile $HOME/.xprofile
 ln -sf $HOME/.profile $HOME/.bash_profile
+
+xrdb -load ~/.Xdefaults
 
 echo "/usr/bin/feh --bg-fill '$PWD/tokyo.jpg'" > $HOME/.fehbg
 chmod +x $HOME/.fehbg

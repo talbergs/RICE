@@ -5,3 +5,11 @@ if not functions -q fisher
 end
 
 set -U __done_exclude '^(ranger|man|open|vim|vi|nvim|git|svn)' 
+
+alias gst 'git status'
+alias gp 'git push'
+alias g 'git'
+alias gco 'git checkout'
+alias gc 'git commit'
+alias gaa 'git add --all'
+alias glog 'git log --graph --oneline --decorate'

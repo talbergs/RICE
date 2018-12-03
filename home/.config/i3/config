@@ -1,7 +1,7 @@
 # bill-key
 set $mod Mod4
 set $alt Mod1
-set $term termite
+set $term $TERMINAL
 
 # designer cosmoss
 for_window [class="^.*"] border pixel 3

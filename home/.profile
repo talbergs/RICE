@@ -6,6 +6,7 @@ fi
 export LANG=en_US.UTF-8
 export EDITOR="nvim"
 export TERMINAL="termite"
+#export TERMINAL="xst"
 export BROWSER="linkhandler"
 export TRUEBROWSER="google-chrome-stable"
 export READER="zathura"
