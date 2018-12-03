@@ -8,6 +8,7 @@ set -U __done_exclude '^(ranger|man|open|vim|vi|nvim|git|svn)'
 
 alias gst 'git status'
 alias gp 'git push'
+alias gr 'git remote'
 alias g 'git'
 alias gco 'git checkout'
 alias gc 'git commit'
