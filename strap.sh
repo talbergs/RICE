@@ -22,14 +22,19 @@ green "yay check"
 
 green "dotpaste/symlinking"
 mkdir -p ~/.config/{zathura,mpd,fish,i3,i3blocks,ranger,mpv,termite,nvim,compton,dunst}
+mkdir -p ~/.config/fish/{functions}
 pop .config/mpv/input.conf
 pop .config/mpd/mpd.conf
 pop .config/ranger/commands.py
+pop .config/ranger/devicons.py
 pop .config/ranger/scope.sh
 pop .config/ranger/rc.conf
+pop .config/ranger/plugins
 pop .config/zathura/zathurarc
 pop .config/fish/fishfile
 pop .config/fish/config.fish
+pop .config/fish/functions/ls.fish
+pop .config/fish/functions/fish_prompt.fish
 pop .config/i3/config
 pop .config/i3blocks/config
 pop .config/dunst/dunstrc
