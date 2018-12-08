@@ -17,6 +17,7 @@ set showbreak=↲
 set expandtab
 set noswapfile
 set scrolloff=4
+set modeline
 
 call plug#begin()
 Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}

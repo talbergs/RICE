@@ -5,7 +5,8 @@
 KBVARIANT=$(setxkbmap -query | grep layout | awk '{print $2}')
 [ -z $1 ] && echo $KBVARIANT && exit
 
-KBVARIANTS=("us" "lv -variant apostrophe" "ru")
+KBVARIANTS=("us" "lv -variant apostrophe")
+#KBVARIANTS=("us" "lv -variant apostrophe" "ru")
 
 for i in "${!KBVARIANTS[@]}";do
     if [[ "${KBVARIANTS[$i]}" == $KBVARIANT* ]];then

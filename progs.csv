@@ -2,7 +2,7 @@ base-devel,is a group package with sudo and compilation software.
 clipmenu,clipmenud in bg remembers your clips
 nerd-fonts-complete,
 all-repository-fonts,even more fonts
-google-chrome,not qutebrowser (google-chrome-stable --app=<url>) to run it in app mode
+chromium,aka google chrome
 xorg-xrandr,adjusts screen resolution and orientation
 nvidia,latest Nvidia drivers right there
 git,guidance in time travel
@@ -76,7 +76,6 @@ docker,
 php-gd,
 docker-compose,
 fish,
-ghetto-skype,
 thunderbird,
 sequeler-git,give it a star and pr
 meld,
