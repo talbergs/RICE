@@ -72,6 +72,7 @@ mariadb,do the "mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/
 apache,hack it if you can
 libevent,common lib
 php-fpm,
+php-xdebug,
 docker,
 php-gd,
 docker-compose,
